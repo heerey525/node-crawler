@@ -26,8 +26,8 @@ node写的爬虫案例，可以运行直接爬取数据作为代理服务，接�
 
 #### 接口文档
 
-1. [http://localhost:3000/baiduNews]: http://localhost:3000/baiduNews	"baiduNews - 百度新闻（最热新闻和本地新闻）"
+1. `http://localhost:3000/baiduNews`  baiduNews - 百度新闻（最热新闻和本地新闻）
 
-2. [http://localhost:3000/baiduNews]: http://localhost:3000/baiduNews	"bossData - boss直聘"
+2. `http://localhost:3000/baiduNews`  bossData - boss直聘
 
    
