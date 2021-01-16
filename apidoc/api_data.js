@@ -1,6 +1,6 @@
 define({ "api": [
   {
-    "type": "post",
+    "type": "get",
     "url": "/baiduNews",
     "title": "百度新闻（最热新闻和本地新闻）",
     "name": "百度新闻（最热新闻和本地新闻）",
@@ -10,7 +10,7 @@ define({ "api": [
     "groupTitle": "baiduNews"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/bossData",
     "title": "boss直聘",
     "name": "boss直聘",
@@ -19,5 +19,27 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "router/bossData.js",
     "groupTitle": "bossData"
+  },
+  {
+    "type": "get",
+    "url": "/pneumonia",
+    "title": "（丁香园）疫情",
+    "name": "疫情",
+    "group": "pneumonia",
+    "description": "<p>（丁香园）疫情爬取</p>",
+    "version": "0.0.0",
+    "filename": "router/pneumonia.js",
+    "groupTitle": "pneumonia"
+  },
+  {
+    "type": "get",
+    "url": "/pneumonia",
+    "title": "（丁香园）疫情数据请求",
+    "name": "疫情数据请求",
+    "group": "pneumonia",
+    "description": "<p>（丁香园）疫情数据请求</p>",
+    "version": "0.0.0",
+    "filename": "router/pneumonia.js",
+    "groupTitle": "pneumonia"
   }
 ] });

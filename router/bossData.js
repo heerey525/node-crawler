@@ -45,15 +45,16 @@ let getBossDatas = (res) => {
 }
 
 /**
- * @api {post} /bossData boss直聘
+ * @api {get} /bossData boss直聘
  * @apiName boss直聘
  * @apiGroup bossData
  * @apiDescription boss直聘会读取cookie，没有cookie或者cookie失效则返回空，如希望能正常爬取，则需替换最新的cookie信息
  */
 router.get('/', function (req, res, next) {
   superagent
-  .get(`https://www.zhipin.com/job_detail/?city=100010000&source=10&query=%E5%89%8D%E7%AB%AF`)
-  .set('Cookie', 'lastCity=101210100; __zp_seo_uuid__=dd00feda-8c6f-461b-88d4-42197394b21a; Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1607836826,1609117593; __g=-; __l=r=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DJU8cMvyTUd2t8GKLv6CbMdYGO3ge9M_sy0LvPrvskL-LfLPABA4zr0y0szy71V2W%26ck%3D4154.1.57.210.188.210.188.32%26shh%3Dwww.baidu.com%26wd%3D%26eqid%3D944313c700017e26000000045fe92faa&l=%2Fwww.zhipin.com%2Fjob_detail%2F%3Fcity%3D100010000%26source%3D10%26query%3D%25E5%2589%258D%25E7%25AB%25AF&s=3&g=&friend_source=0&s=3&friend_source=0; ___gtid=1069318173; __fid=c84e2cb99ce69979542f551e9c30aed9; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1609136926; __c=1607836826; __a=75525697.1607836826..1607836826.32.1.32.32; __zp_stoken__=18aebAGsiLEpifxpXej1gUxNAN2VTRVcNa24VDyNOUl4IVTlVYkxHR3IsXQBTICxhPEcPbTx7FzU8NxwuKEs8EzREZUgpRGEPMEQnMGAvCzcffX0gDh1ZUV0TeygDJzwXOhYFfnhbRDxIQEtNLA%3D%3D')
+  // .get(`https://www.zhipin.com/job_detail/?city=100010000&source=10&query=%E5%89%8D%E7%AB%AF`)
+  .get(`https://www.zhipin.com/c100010000/?query=%E5%89%8D%E7%AB%AF&page=1&ka=page-1`)
+  .set('Cookie', 'Hm_lvt_194df3105ad7148dcf2b98a91b5e727a=1607836826,1609117593,1609136980,1610000184; lastCity=100010000; __g=-; __zp_stoken__=7d39bC0BcM15VZwRVGQg8In9hE1N0XnFuPAMlelZXO2x5Mgt4Vkl7RH8YeX4HDwxxD2QSTG1VEWpOeQYCblpmW3c7UFUVezZQXwldH01gSRovPBQrZ3sCZAgPdw5hb39aCTUYdVxfYGxPBTZhHQ%3D%3D; toUrl=https%3A%2F%2Fwww.zhipin.com%2F; __c=1610002050; __a=55105593.1610002050..1610002050.3.1.3.3; Hm_lpvt_194df3105ad7148dcf2b98a91b5e727a=1610002782')
   .end((err, res1) => {
     if (err) {
       // 如果访问失败或者出错，会这行这里

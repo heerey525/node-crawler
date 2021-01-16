@@ -52,7 +52,7 @@ let getLocalNews = (res) => {
   return localNews
 }
 /**
- * @api {post} /baiduNews 百度新闻（最热新闻和本地新闻）
+ * @api {get} /baiduNews 百度新闻（最热新闻和本地新闻）
  * @apiName 百度新闻（最热新闻和本地新闻）
  * @apiGroup baiduNews
  */
