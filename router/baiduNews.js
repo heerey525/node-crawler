@@ -55,6 +55,7 @@ let getLocalNews = (res) => {
  * @api {get} /baiduNews 百度新闻（最热新闻和本地新闻）
  * @apiName 百度新闻（最热新闻和本地新闻）
  * @apiGroup baiduNews
+ * @apiDescription 实时爬取展示，相当于代理访问
  */
 router.get('/', function (req, res) {
   /**
