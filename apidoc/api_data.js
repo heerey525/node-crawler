@@ -45,6 +45,70 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/other/one",
+    "title": "一个",
+    "name": "一个",
+    "group": "other",
+    "description": "<p>一个（http://www.wufazhuce.com/）</p>",
+    "version": "0.0.0",
+    "filename": "router/other.js",
+    "groupTitle": "other"
+  },
+  {
+    "type": "get",
+    "url": "/other/hitokoto",
+    "title": "一言",
+    "name": "一言",
+    "group": "other",
+    "description": "<p>一言（https://developer.hitokoto.cn/）</p>",
+    "version": "0.0.0",
+    "filename": "router/other.js",
+    "groupTitle": "other"
+  },
+  {
+    "type": "get",
+    "url": "/other/toutiao",
+    "title": "今日头条",
+    "name": "今日头条",
+    "group": "other",
+    "description": "<p>今日头条</p>",
+    "version": "0.0.0",
+    "filename": "router/other.js",
+    "groupTitle": "other"
+  },
+  {
+    "type": "get",
+    "url": "/other/movie",
+    "title": "豆瓣热门电影",
+    "name": "豆瓣热门电影",
+    "group": "other",
+    "description": "<p>豆瓣热门电影</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "pageNo",
+            "description": "<p>页数（默认：1）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "pageSize",
+            "description": "<p>每页条数（默认：10）</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/other.js",
+    "groupTitle": "other"
+  },
+  {
+    "type": "get",
     "url": "/pneumonia",
     "title": "（丁香园）疫情数据请求",
     "name": "疫情数据请求",
@@ -53,5 +117,38 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "router/pneumonia.js",
     "groupTitle": "pneumonia"
+  },
+  {
+    "type": "get",
+    "url": "/v2ex/latest",
+    "title": "最新主题",
+    "name": "最新主题",
+    "group": "v2ex",
+    "description": "<p>最新主题 相当于首页的“全部”这个 tab 下的最新内容。</p>",
+    "version": "0.0.0",
+    "filename": "router/v2ex.js",
+    "groupTitle": "v2ex"
+  },
+  {
+    "type": "get",
+    "url": "/v2ex/hot",
+    "title": "最热主题",
+    "name": "最热主题",
+    "group": "v2ex",
+    "description": "<p>最热主题 相当于首页右侧的 10 大每天的内容</p>",
+    "version": "0.0.0",
+    "filename": "router/v2ex.js",
+    "groupTitle": "v2ex"
+  },
+  {
+    "type": "get",
+    "url": "/v2ex/node",
+    "title": "节点信息",
+    "name": "节点信息",
+    "group": "v2ex",
+    "description": "<p>节点信息 获得指定节点的名字，简介，URL 及头像图片的地址。</p>",
+    "version": "0.0.0",
+    "filename": "router/v2ex.js",
+    "groupTitle": "v2ex"
   }
 ] });

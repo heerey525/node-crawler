@@ -7,6 +7,8 @@ const baiduNewsRouter = require('./router/baiduNews')
 const bossDataRouter = require('./router/bossData')
 const pneumoniaRouter = require('./router/pneumonia')
 const hotSearchRouter = require('./router/hotSearch')
+const otherRouter = require('./router/other')
+const v2exRouter = require('./router/v2ex')
 // 百度新闻
 app.use('/baiduNews', baiduNewsRouter)
 // boss直聘
@@ -15,6 +17,10 @@ app.use('/bossData', bossDataRouter)
 app.use('/pneumonia', pneumoniaRouter)
 // 微博热搜
 app.use('/hotSearch', hotSearchRouter)
+// 其他
+app.use('/other', otherRouter)
+// v2ex
+app.use('/v2ex', v2exRouter)
 
 let server = app.listen(3000, function () {
   const port = server.address().port
