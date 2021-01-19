@@ -38,7 +38,7 @@ define({ "api": [
     "title": "微博热搜",
     "name": "微博热搜",
     "group": "hotSearch",
-    "description": "<p>微博热搜（项目运行起来定时任务每1分钟重新爬取一次）</p>",
+    "description": "<p>微博热搜（项目运行起来定时任务每15分钟重新爬取一次）</p>",
     "version": "0.0.0",
     "filename": "router/hotSearch.js",
     "groupTitle": "hotSearch"
@@ -113,7 +113,7 @@ define({ "api": [
     "title": "（丁香园）疫情数据请求",
     "name": "疫情数据请求",
     "group": "pneumonia",
-    "description": "<p>（丁香园）疫情数据请求（项目运行起来定时任务每5分钟重新爬取一次）</p>",
+    "description": "<p>（丁香园）疫情数据请求（项目运行起来定时任务每15分钟重新爬取一次）</p>",
     "version": "0.0.0",
     "filename": "router/pneumonia.js",
     "groupTitle": "pneumonia"
@@ -147,6 +147,19 @@ define({ "api": [
     "name": "节点信息",
     "group": "v2ex",
     "description": "<p>节点信息 获得指定节点的名字，简介，URL 及头像图片的地址。</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>节点名（V2EX 的节点名全是半角英文或者数字） 例如：python</p>"
+          }
+        ]
+      }
+    },
     "version": "0.0.0",
     "filename": "router/v2ex.js",
     "groupTitle": "v2ex"

@@ -48,12 +48,14 @@ router.get('/latest', function (req, res, next) {
  * @apiName 节点信息
  * @apiGroup v2ex
  * @apiDescription 节点信息 获得指定节点的名字，简介，URL 及头像图片的地址。
+ * 
+ * @apiParam {String} name  节点名（V2EX 的节点名全是半角英文或者数字） 例如：python
  */
 router.get('/node', function (req, res, next) {
   if (!req.query.name) return res.send({ code: 500, msg: '获取节点信息失败' })
   const name = req.query.name
   superagent
-    .get(`https://www.v2ex.com/api/nodes/show.json?name=${name}&t=${new Date().getTime()}`)
+    .get(`https://www.v2ex.com/api/nodes/show.json?name=${name}`)
     .end((err, res1) => {
       if (err) {
         // 如果访问失败或者出错，会这行这里

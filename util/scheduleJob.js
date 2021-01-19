@@ -10,8 +10,8 @@ const crawlItems = require('./crawlItems')
 // 2016年的1月1日1点1分30秒触发 ：'30 1 1 1 2016 *'
 // 每周1的1点1分30秒触发 ：'30 1 1 * * 1'
 
-// 每60秒爬取一次
-nodeSchedule.scheduleJob('60 * * * * *', async function () {
+// 每15分钟爬取一次
+nodeSchedule.scheduleJob('* 15 * * * *', async function () {
   // 微博热搜
   try {
     const hotList = await crawlItems.getHotSearchList()
@@ -24,8 +24,8 @@ nodeSchedule.scheduleJob('60 * * * * *', async function () {
     console.error(error)
   }
 })
-// 每5分钟爬取一次
-nodeSchedule.scheduleJob('1 5 * * * *', async function () {
+// 每15分钟爬取一次
+nodeSchedule.scheduleJob('* 15 * * * *', async function () {
   // 丁香园疫情
   try {
     const originDataObj = await crawlItems.getPneumoniaData()
