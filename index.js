@@ -9,6 +9,8 @@ const pneumoniaRouter = require('./router/pneumonia')
 const hotSearchRouter = require('./router/hotSearch')
 const otherRouter = require('./router/other')
 const v2exRouter = require('./router/v2ex')
+const taobaokeRouter = require('./router/taobaoke')
+
 // 百度新闻
 app.use('/baiduNews', baiduNewsRouter)
 // boss直聘
@@ -21,6 +23,8 @@ app.use('/hotSearch', hotSearchRouter)
 app.use('/other', otherRouter)
 // v2ex
 app.use('/v2ex', v2exRouter)
+// 淘宝客
+app.use('/taobaoke', taobaokeRouter)
 
 let server = app.listen(3000, function () {
   const port = server.address().port

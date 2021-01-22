@@ -7,7 +7,7 @@ const path = require('path')
  * @api {get} /pneumonia （丁香园）疫情数据请求
  * @apiName 疫情数据请求
  * @apiGroup pneumonia
- * @apiDescription （丁香园）疫情数据请求（项目运行起来定时任务每5分钟重新爬取一次）
+ * @apiDescription （丁香园）疫情数据请求（项目运行起来定时任务每15分钟重新爬取一次）
  */
 router.get('/', function (req, res, next) {
   //  读取本地数据

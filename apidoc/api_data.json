@@ -163,5 +163,51 @@
     "version": "0.0.0",
     "filename": "router/v2ex.js",
     "groupTitle": "v2ex"
+  },
+  {
+    "type": "get",
+    "url": "/taobaoke/coupon",
+    "title": "淘宝客-公用-推广券查询(个人开发者没有该权限)",
+    "name": "淘宝客-公用-推广券查询(个人开发者没有该权限)",
+    "group": "淘宝客",
+    "description": "<p>淘宝客-公用-推广券查询(个人开发者没有该权限)</p>",
+    "version": "0.0.0",
+    "filename": "router/taobaoke.js",
+    "groupTitle": "淘宝客"
+  },
+  {
+    "type": "get",
+    "url": "/taobaoke",
+    "title": "淘宝客-公用-淘宝客商品详情查询(简版)",
+    "name": "淘宝客-公用-淘宝客商品详情查询(简版)",
+    "group": "淘宝客",
+    "description": "<p>淘宝客-公用-淘宝客商品详情查询(简版)</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number|String",
+            "optional": false,
+            "field": "num_iids",
+            "description": "<p>商品id（例如 634021037690）</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/taobaoke.js",
+    "groupTitle": "淘宝客"
+  },
+  {
+    "type": "get",
+    "url": "/taobaoke/ele",
+    "title": "淘宝客-公用-饿了么推广",
+    "name": "淘宝客-公用-饿了么推广",
+    "group": "淘宝客",
+    "description": "<p>淘宝客-公用-饿了么推广</p>",
+    "version": "0.0.0",
+    "filename": "router/taobaoke.js",
+    "groupTitle": "淘宝客"
   }
 ]

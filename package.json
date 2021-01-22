@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "blueimp-md5": "^2.18.0",
     "cheerio": "^1.0.0-rc.5",
     "express": "^4.17.1",
     "superagent": "^6.1.0"

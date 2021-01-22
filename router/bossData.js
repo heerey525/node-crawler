@@ -14,6 +14,7 @@ let getBossDatas = (res) => {
   /* 使用cheerio模块的cherrio.load()方法，将HTMLdocument作为参数传入函数
      以后就可以使用类似jQuery的$(selectior)的方式来获取页面元素
    */
+  
   let $ = cheerio.load(res.text)
 
   // 找到目标数据所在的页面元素，获取数据

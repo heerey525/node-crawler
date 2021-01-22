@@ -7,7 +7,7 @@ const path = require('path')
  * @api {get} /hotSearch 微博热搜
  * @apiName 微博热搜
  * @apiGroup hotSearch
- * @apiDescription 微博热搜（项目运行起来定时任务每1分钟重新爬取一次）
+ * @apiDescription 微博热搜（项目运行起来定时任务每15分钟重新爬取一次）
  */
 router.get('/', function (req, res, next) {
   //  读取本地数据
